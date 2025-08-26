@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestMyKey - API Key Validator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Instantly validate API keys for popular services like OpenAI, Google Gemini, Anthropic, and more.">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>Test<span>My</span>Key</h1>
+        </div>
+        <p class="tagline">Validate Your API Keys Instantly</p>
+        <p class="description">
+            Quick and secure validation for API keys from OpenAI, Google Gemini, Anthropic, and many more services.
+            Your keys are never stored or logged.
+        </p>
+    </div>
+
+    <div class="container">
+        <form id="verifyForm">
+            <div class="form-group">
+                <label for="service">Select Service</label>
+                <select id="service" name="service" required>
+                    <option value="">Choose a service to validate</option>
+                    <option value="openai">OpenAI</option>
+                    <option value="gemini">Google Gemini</option>
+                    <option value="anthropic">Anthropic</option>
+                    <option value="cohere">Cohere</option>
+                    <option value="stripe">Stripe</option>
+                    <option value="github">GitHub</option>
+                    <option value="notion">Notion</option>
+                    <option value="firebase">Firebase</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="spotify">Spotify</option>
+                    <option value="azure">Azure</option>
+                    <option value="supabase">Supabase</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="api_key">API Key</label>
+                <input type="password" id="api_key" name="api_key" required placeholder="Paste your API key here">
+            </div>
+
+            <!-- Additional fields for services that need them -->
+            <div id="twitter-fields" class="additional-fields">
+                <div class="form-group">
+                    <label for="api_secret">API Secret</label>
+                    <input type="password" id="api_secret" name="api_secret" placeholder="Enter your API Secret">
+                </div>
+            </div>
+
+            <div id="spotify-fields" class="additional-fields">
+                <div class="form-group">
+                    <label for="client_secret">Client Secret</label>
+                    <input type="password" id="client_secret" name="client_secret" placeholder="Enter your Client Secret">
+                </div>
+            </div>
+
+            <div id="azure-fields" class="additional-fields">
+                <div class="form-group">
+                    <label for="client_secret">Client Secret</label>
+                    <input type="password" id="client_secret" name="client_secret" placeholder="Enter your Client Secret">
+                </div>
+                <div class="form-group">
+                    <label for="tenant_id">Tenant ID</label>
+                    <input type="text" id="tenant_id" name="tenant_id" placeholder="Enter your Tenant ID">
+                </div>
+            </div>
+
+            <div id="supabase-fields" class="additional-fields">
+                <div class="form-group">
+                    <label for="supabase_url">Supabase URL</label>
+                    <input type="text" id="supabase_url" name="supabase_url" placeholder="Enter your Supabase URL">
+                </div>
+            </div>
+
+            <button type="submit" id="verifyButton">
+                <i class="fas fa-key"></i>
+                Verify API Key
+            </button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Your API keys are never stored or logged</p>
+            <p>All validations are performed securely in real-time</p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sachinskyte/" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                Connect on LinkedIn
+            </a>
+        </div>
+        <div class="creator">
+            <span>Created by</span>
+            <a href="https://www.linkedin.com/in/sachinskyte/" target="_blank" rel="noopener">Sachin</a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
