@@ -86,7 +86,7 @@ TestMyKey is a web-based tool that allows developers to quickly validate API key
 ## 👤 Author
 
 **Sachin**
-- GitHub: [@sachinskyte](https://github.com/mugenkyou)
+- GitHub: [@mugenkyou](https://github.com/mugenkyou)
 - LinkedIn: [@sachinskyte](https://www.linkedin.com/in/sachinskyte/)
 
 ## ⭐ Show your support
